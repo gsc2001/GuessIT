@@ -40,7 +40,7 @@ function initialize() {
 
 function won() {
     swal({
-        title: "You won!!",
+        title: "Correct!",
         icon: "success"
     }).then(main)
 }
