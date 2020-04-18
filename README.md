@@ -5,8 +5,9 @@ A small color guessing game made using js. Uses Electronjs for making it a simpl
 ![screenshot](images/screenshot.png)
 
 ## Running :runner:
-You need to have Node.js installed
-to install dependicies : 
+You need to have Node.js installed.
+
+To install dependicies : 
 ```bash
 $ npm install 
 ```
