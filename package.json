@@ -1,0 +1,14 @@
+{
+  "name": "guess_it",
+  "version": "1.0.0",
+  "description": "A simple color guessing game",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Gurkirat Singh",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^8.2.3"
+  }
+}
