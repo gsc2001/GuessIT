@@ -1,3 +1,6 @@
+
+// Classes
+
 class Box {
     constructor(id) {
         this.id = id
@@ -9,6 +12,17 @@ class Box {
         this.dom.style.backgroundColor = "rgb(" + this.color.join(',') + ")"
     }
 }
+
+//-------------------------------------------------------------------------------------------------------------
+
+// Globals
+
+var count, boxes, correct_color, correct_box_i, correct_box
+
+//--------------------------------------------------------------------------------------------------------------
+
+// Functions
+
 function disappear() {
     this.style.opacity = "0";
 }
@@ -28,14 +42,14 @@ function won() {
     swal({
         title: "You won!!",
         icon: "success"
-    }).then(re)
+    }).then(main)
 }
 
 function loose() {
     swal({
         title: "You lose",
         icon: "error"
-    }).then(re)
+    }).then(main)
 }
 function check(no) {
     count--;
@@ -43,19 +57,10 @@ function check(no) {
         won()
     else if (count == 1)
         loose()
-
 }
 
-var count = 6;
-var boxes = initialize();
-var correct_color = [Math.floor(255 * Math.random()), Math.floor(255 * Math.random()), Math.floor(255 * Math.random())]
-var correct_box_i = Math.floor(Math.random() * 6)
-var correct_box = boxes[correct_box_i]
-color_dom = document.getElementById('correct_color');
-color_dom.innerHTML = "RGB(" + correct_color.join(',') + ")";
-correct_box.set_color(correct_color)
 
-function re() {
+function main() {
     count = 6;
     boxes = initialize();
     correct_color = [Math.floor(255 * Math.random()), Math.floor(255 * Math.random()), Math.floor(255 * Math.random())]
@@ -64,4 +69,7 @@ function re() {
     color_dom.innerHTML = "rgb(" + correct_color.join(',') + ")";
     correct_box.set_color(correct_color)
 }
+// --------------------------------------------------------------------------------------------------------
 
+// Calling the main function
+main()
