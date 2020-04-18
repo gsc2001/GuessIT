@@ -66,6 +66,7 @@ function main() {
     correct_color = [Math.floor(255 * Math.random()), Math.floor(255 * Math.random()), Math.floor(255 * Math.random())]
     correct_box_i = Math.floor(Math.random() * 6)
     correct_box = boxes[correct_box_i]
+    color_dom = document.getElementById('correct_color');
     color_dom.innerHTML = "rgb(" + correct_color.join(',') + ")";
     correct_box.set_color(correct_color)
 }
